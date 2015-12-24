@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">邢台巴士</string>
+    <string name="action_settings">关于我们</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="selectline">请选择公交线路:</string>
+    <string name="gjcx">邢台公交查询</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+
+
+</resources>
