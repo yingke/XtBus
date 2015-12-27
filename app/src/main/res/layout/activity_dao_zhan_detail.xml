@@ -9,9 +9,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="@dimen/activity_horizontal_margin"
+    android:padding="@dimen/activity_horizontal_margin">
 
-   >
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
@@ -20,44 +19,31 @@
         card_view:cardBackgroundColor="@color/bc"
         card_view:cardCornerRadius="5dp"
         card_view:cardElevation="3dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/detail_tv"
             android:textSize="20sp"
             android:padding="@dimen/activity_horizontal_margin"
-            android:textColor="@color/baise"
-             />
+            android:textColor="@color/baise" />
+
         </android.support.v7.widget.CardView>>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:padding="@dimen/activity_horizontal_margin"
-        >
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fabBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fabSize="mini"
-            android:src="@android:drawable/ic_popup_sync">
-        </android.support.design.widget.FloatingActionButton>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/detail_time"
-            android:textSize="16sp"
-            android:padding="10dp"
-            android:layout_gravity="center"
-            />
-
-    </LinearLayout>>
 
 
 </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="mini"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="@dimen/codelab_fab_margin_right"
+        android:layout_marginBottom="@dimen/codelab_fab_margin_bottom"
+        android:src="@android:drawable/stat_notify_sync_noanim">
+
+    </android.support.design.widget.FloatingActionButton>
 
 
 </android.support.design.widget.CoordinatorLayout>

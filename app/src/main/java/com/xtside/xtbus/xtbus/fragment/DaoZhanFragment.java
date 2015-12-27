@@ -98,6 +98,7 @@ public class DaoZhanFragment extends Fragment implements MyItemClickListener{
         linemap.put("106路", "1006");
         linemap.put("108路", "1008");
         linemap.put("109路", "0189");
+        linemap.put("111路", "1011");
 
         /*************************/
 
@@ -152,6 +153,7 @@ public class DaoZhanFragment extends Fragment implements MyItemClickListener{
         lines.add("106路");
         lines.add("108路");
         lines.add("109路");
+        lines.add("111路");
     }
 
     @Override
@@ -166,13 +168,17 @@ public class DaoZhanFragment extends Fragment implements MyItemClickListener{
         LineAdapter adapter=new LineAdapter(getActivity(),lines );
         mRecycerview.setAdapter(adapter);
         adapter.setOnItemClickListener(this);
+
         return mView;
     }
 
     @Override
     public void onItemClick(View view, int postion) {
+
        String linename=lines.get(postion);
+
         if(linename != null){
+
             String lineid=linemap.get(linename);
             Bundle mBundle=new Bundle();
             mBundle.putString("linename",linename);
