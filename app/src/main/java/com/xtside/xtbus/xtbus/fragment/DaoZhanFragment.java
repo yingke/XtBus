@@ -6,18 +6,14 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.xtside.xtbus.xtbus.DaoZhan;
 import com.xtside.xtbus.xtbus.R;
 import com.xtside.xtbus.xtbus.adapter.LineAdapter;
 import com.xtside.xtbus.xtbus.myinterface.MyItemClickListener;
-import com.xtside.xtbus.xtbus.uitils.MyConstant;
-
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -159,7 +155,6 @@ public class DaoZhanFragment extends Fragment implements MyItemClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View mView =inflater.inflate(R.layout.fragment_dao_zhan, container, false);
         mRecycerview =(RecyclerView)mView.findViewById(R.id.id_recyclerview);
         mRecycerview.setHasFixedSize(true);

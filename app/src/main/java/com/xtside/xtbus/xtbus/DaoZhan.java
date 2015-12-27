@@ -1,15 +1,15 @@
 package com.xtside.xtbus.xtbus;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.design.widget.Snackbar;
-import android.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -18,6 +18,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+
 import com.umeng.analytics.MobclickAgent;
 import com.xtside.xtbus.xtbus.adapter.StationAdapter;
 import com.xtside.xtbus.xtbus.bean.StationBean;
@@ -25,29 +26,27 @@ import com.xtside.xtbus.xtbus.myinterface.MyItemClickListener;
 import com.xtside.xtbus.xtbus.sql.StationDao;
 import com.xtside.xtbus.xtbus.uitils.JsoupHelp;
 import com.xtside.xtbus.xtbus.uitils.MyConstant;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class DaoZhan extends AppCompatActivity implements MyItemClickListener {
 
+    private final static int ISNET = 0;
+    private final static int ISSQL = 1;
+    public AlertDialog my_dialog;
     private String linename;
     private String lineid ;
     private Button but_shangxing;
     private Button but_xiaxing;
     private RecyclerView recyclerView;
     private StationAdapter adapter;
-    private final static int ISNET=0;
-    private final static int ISSQL=1;
     private String url;
     private String shangxing_url;
     private String xiaxing_url;
     private StationDao stationDao;
     private List<StationBean> stations;
     private ArrayList<StationBean> list_stations;
-    public AlertDialog my_dialog;
-
-
-
     public Handler mHandler=new Handler(){
         public void handleMessage(Message msg) {
             switch(msg.what){
@@ -248,8 +247,6 @@ public class DaoZhan extends AppCompatActivity implements MyItemClickListener {
 
         my_dialog.show();
         my_dialog.getWindow().setContentView(view);
-      //  my_dialog.getWindow().setLayout(500, 200);
-
     }
 
     public void onResume() {

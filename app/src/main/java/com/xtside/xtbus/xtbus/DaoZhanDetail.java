@@ -1,21 +1,24 @@
 package com.xtside.xtbus.xtbus;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+
 import com.umeng.analytics.MobclickAgent;
 import com.xtside.xtbus.xtbus.uitils.JsoupHelp;
 import com.xtside.xtbus.xtbus.uitils.MyConstant;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -27,18 +30,12 @@ public class DaoZhanDetail extends AppCompatActivity {
     public AlertDialog my_dialog;
     private TextView tv;
     private  String detail;
-    private  String url;
-    private FloatingActionButton fabBtn;
-    private TimerTask mTimerTask;
-    private Timer mTimer;
-
-
-    public Handler mHandler=new Handler(){
+    public Handler mHandler = new Handler() {
         public void handleMessage(Message msg) {
-            switch(msg.what){
-                case STATIONMSG :
+            switch (msg.what) {
+                case STATIONMSG:
 
-                   my_dialog.dismiss();
+                    my_dialog.dismiss();
 
                     tv.setText(getname(detail));
 
@@ -49,11 +46,15 @@ public class DaoZhanDetail extends AppCompatActivity {
                     tv_time.setText(msg.getData().getInt("time")+"  秒之后车辆信息更新");
                     break;*/
 
-                default :
+                default:
                     break;
             }
         }
     };
+    private  String url;
+    private FloatingActionButton fabBtn;
+    private TimerTask mTimerTask;
+    private Timer mTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,7 +115,6 @@ public class DaoZhanDetail extends AppCompatActivity {
         View view = LayoutInflater.from(this)
                 .inflate(R.layout.jiazaitiao,
                         null);
-
         my_dialog = new AlertDialog.Builder(DaoZhanDetail.this).create();
         my_dialog.show();
         my_dialog.getWindow().setContentView(view);
