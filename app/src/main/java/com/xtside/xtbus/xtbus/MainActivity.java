@@ -14,6 +14,8 @@ import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
 import com.xtside.xtbus.xtbus.adapter.SectionsPagerAdapter;
 import com.xtside.xtbus.xtbus.fragment.DaoZhanFragment;
+import com.xtside.xtbus.xtbus.fragment.Gongjiaochaxun_Fragment;
+
 import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setTitle(R.string.gjcx);
 
         fragments.add(new DaoZhanFragment());
-        fragments.add(new DaoZhanFragment());
+        fragments.add(new Gongjiaochaxun_Fragment());
         fragments.add(new DaoZhanFragment());
         fragments.add(new DaoZhanFragment());
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(),fragments);

@@ -37,7 +37,7 @@
         android:id="@+id/fabBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:fabSize="mini"
+        app:fabSize="normal"
         android:layout_gravity="right|bottom"
         android:layout_marginRight="@dimen/codelab_fab_margin_right"
         android:layout_marginBottom="@dimen/codelab_fab_margin_bottom"

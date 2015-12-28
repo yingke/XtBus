@@ -31,17 +31,17 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // Show 3 total pages.
-        return 1;
+        return 2;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "查看到站距离";
-            /*case 1:
-                return "换乘";
-            case 2:
+                return "到站查询";
+            case 1:
+                return "公交查询";
+           /* case 2:
                 return "线路";
             case 3:
                 return  "站点" ;*/
