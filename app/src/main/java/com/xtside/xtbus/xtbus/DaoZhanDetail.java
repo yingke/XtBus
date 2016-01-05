@@ -97,6 +97,7 @@ public class DaoZhanDetail extends AppCompatActivity {
     public  String getname(String s){
 
         String[] name=s.split("<br>");
+        Log.i("bug",name.length+name.toString());
 
         if (name.length ==5){
             return name[2]+"\n"+name[3];
